@@ -16,9 +16,14 @@
  </template>
  
  <script setup>
- import { computed } from 'vue';
+ import { computed,onMounted } from 'vue';
  import store from '../store';
+ import axiosCient from '../axiosClient.js';
 
- 
  const letters ="ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
-</script>
+
+ onMounted(async () =>{
+     const response = await axiosCient.get('list.php?i=list')
+     console.log(response.data)
+ })
+</script> 
