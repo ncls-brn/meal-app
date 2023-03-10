@@ -7,13 +7,21 @@
         @change="searchMeals"
     />
 </div>
+
+<pre>{{ meals }}</pre>
 </template>
 
 <script setup>
+import { ref } from 'vue';
+import { computed } from '@vue/reactivity';
+import axiosClient from '../axiosClient';
+import store from '../store';
 
 const keyword = ref('');
-function searchMeals(){
+const meals = computed(()=> store.state.searchedMeals)
 
+function searchMeals(){
+    store.dispach('searchMeals', keyword.value)
 };
 
 
