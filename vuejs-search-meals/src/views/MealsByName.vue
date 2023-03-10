@@ -8,20 +8,32 @@
     />
 </div>
 
-<pre>{{ meals }}</pre>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
+    <div v-for="meal of meals" :key="meal.idMeal" class="bg-white shadow rounded-x1">
+        <img :src="meal.strMealThumb" :alt="strMeal" class="rounded-t">
+        <h3 class="p-3 font-semibold">{{ meal.strMeal }}</h3>
+        <div class="p -3">
+            <a :href="meal.strYoutube" target="_blank">YouTube</a>
+            <router-link to="/">
+                View
+            </router-link>>
+    
+        </div>
+
+    </div>
+</div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 import { computed } from '@vue/reactivity';
-import axiosClient from '../axiosClient';
 import store from '../store';
 
 const keyword = ref('');
 const meals = computed(()=> store.state.searchedMeals)
 
 function searchMeals(){
-    store.dispach('searchMeals', keyword.value)
+    store.dispatch('searchMeals', keyword.value)
 };
 
 
