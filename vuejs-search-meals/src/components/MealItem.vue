@@ -23,10 +23,11 @@
 </template>
 
 <script setup>
+
 const { meal } = defineProps({
   meal: {
     required: true,
-    type: object,
+    type: Object,
   },
 });
 </script>
