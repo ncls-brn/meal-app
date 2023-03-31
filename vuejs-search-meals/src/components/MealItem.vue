@@ -9,9 +9,11 @@
     </router-link>
     <h3 class="font-bold">{{ meal.strMeal }}</h3>
     <p class="mb-4">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dicta
+      {{ meal.strCategory }}
+      <!--Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dicta
       fuga? Similique, inventore quisquam autem, omnis laborum, est eos magni
-      eligendi natus ratione culpa obcaecati quas facere magnam quam. Minima.
+      eligendi natus ratione culpa obcaecati quas facere magnam quam. Minima.-->
+
     </p>
     <div class="flex items-center justify-between">
       <YouTubeButton :href="meal.strYoutube">YouTube</YouTubeButton>
