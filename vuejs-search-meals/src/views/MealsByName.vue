@@ -8,7 +8,7 @@
     />
 </div>
 
-<Meals :meals="meals"/>
+<Meals :meals="meals" />
 </template>
 
 <script setup>
@@ -16,8 +16,6 @@ import { ref, onMounted } from 'vue';
 import { computed } from '@vue/reactivity';
 import store from '../store';
 import { useRoute } from 'vue-router';
-//import YouTubeButton from '../components/YouTubeButton.vue';
-import MealItem from '../components/MealItem.vue';
 import Meals from '../components/Meals.vue';
 
 const route = useRoute(); 

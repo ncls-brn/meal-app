@@ -1,10 +1,10 @@
 <template>
-<Meals :meals="meals"/>
+<Meals :meals="meals" />
 
 </template>
-
+ 
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onMounted } from 'vue';
 import store from '../store';
 import { useRoute } from 'vue-router';
 import { computed } from '@vue/reactivity';

@@ -4,7 +4,7 @@
 </div>
 
 <div v-if="!meals.length" class="flex justify-center text-gray-600">
-    There are no meals!
+    There are no meals
 
 </div>
 </template>
@@ -16,6 +16,7 @@ const { meals } = defineProps({
     meals: {
         required: true,
         type: Array,
+        
     }
 });
 
