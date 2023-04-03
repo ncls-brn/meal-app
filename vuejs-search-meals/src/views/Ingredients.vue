@@ -4,8 +4,9 @@
     <router-link
     :to="{
         name: 'byIngredient',
-        params: { ingredient: ingredient.strIngredient },
-        
+        params: { ingredient: ingredient.strDescription },
+        //params ingredients not strDescription =>strIngredient but bug in page 
+        //find the problem for next step.
     }" 
     
     
